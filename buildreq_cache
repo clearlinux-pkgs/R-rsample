@@ -1,6 +1,10 @@
-0.0.2
-R-tibble
+0.0.3
 R-AmesHousing
 R-broom
+R-generics
+R-ggplot2
 R-lubridate
 R-recipes
+R-rlang
+R-tibble
+R-tidyr
