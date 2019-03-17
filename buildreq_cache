@@ -3,10 +3,15 @@ R-AmesHousing
 R-broom
 R-generics
 R-ggplot2
+R-gtable
+R-labeling
+R-lazyeval
 R-lubridate
 R-mime
+R-munsell
 R-recipes
 R-rlang
+R-scales
 R-tibble
 R-tidyr
 R-utf8

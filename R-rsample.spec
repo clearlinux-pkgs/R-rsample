@@ -4,22 +4,30 @@
 #
 Name     : R-rsample
 Version  : 0.0.4
-Release  : 7
+Release  : 8
 URL      : https://cran.r-project.org/src/contrib/rsample_0.0.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsample_0.0.4.tar.gz
 Summary  : General Resampling Infrastructure
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-mime
-Requires: R-utf8
+Requires: R-gtable
+Requires: R-labeling
+Requires: R-lazyeval
+Requires: R-munsell
+Requires: R-scales
 BuildRequires : R-AmesHousing
 BuildRequires : R-broom
 BuildRequires : R-generics
 BuildRequires : R-ggplot2
+BuildRequires : R-gtable
+BuildRequires : R-labeling
+BuildRequires : R-lazyeval
 BuildRequires : R-lubridate
 BuildRequires : R-mime
+BuildRequires : R-munsell
 BuildRequires : R-recipes
 BuildRequires : R-rlang
+BuildRequires : R-scales
 BuildRequires : R-tibble
 BuildRequires : R-tidyr
 BuildRequires : R-utf8
@@ -36,10 +44,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552862444
+export SOURCE_DATE_EPOCH=1552865457
 
 %install
-export SOURCE_DATE_EPOCH=1552862444
+export SOURCE_DATE_EPOCH=1552865457
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
