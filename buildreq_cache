@@ -4,7 +4,9 @@ R-broom
 R-generics
 R-ggplot2
 R-lubridate
+R-mime
 R-recipes
 R-rlang
 R-tibble
 R-tidyr
+R-utf8

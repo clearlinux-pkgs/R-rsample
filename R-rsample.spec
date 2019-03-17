@@ -4,22 +4,25 @@
 #
 Name     : R-rsample
 Version  : 0.0.4
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/rsample_0.0.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsample_0.0.4.tar.gz
 Summary  : General Resampling Infrastructure
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-broom
-Requires: R-generics
-Requires: R-ggplot2
-Requires: R-rlang
-Requires: R-tidyr
+Requires: R-mime
+Requires: R-utf8
+BuildRequires : R-AmesHousing
 BuildRequires : R-broom
 BuildRequires : R-generics
 BuildRequires : R-ggplot2
+BuildRequires : R-lubridate
+BuildRequires : R-mime
+BuildRequires : R-recipes
 BuildRequires : R-rlang
+BuildRequires : R-tibble
 BuildRequires : R-tidyr
+BuildRequires : R-utf8
 BuildRequires : buildreq-R
 
 %description
@@ -33,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1546885978
+export SOURCE_DATE_EPOCH=1552862444
 
 %install
-export SOURCE_DATE_EPOCH=1546885978
+export SOURCE_DATE_EPOCH=1552862444
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -72,8 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library rsample|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  rsample || :
 
 
 %files
@@ -111,3 +113,22 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/rsample/help/rsample.rdx
 /usr/lib64/R/library/rsample/html/00Index.html
 /usr/lib64/R/library/rsample/html/R.css
+/usr/lib64/R/library/rsample/tests/testthat.R
+/usr/lib64/R/library/rsample/tests/testthat/test_boot.R
+/usr/lib64/R/library/rsample/tests/testthat/test_caret.R
+/usr/lib64/R/library/rsample/tests/testthat/test_dplyr.R
+/usr/lib64/R/library/rsample/tests/testthat/test_for_pred.R
+/usr/lib64/R/library/rsample/tests/testthat/test_gather.R
+/usr/lib64/R/library/rsample/tests/testthat/test_group.R
+/usr/lib64/R/library/rsample/tests/testthat/test_initial.R
+/usr/lib64/R/library/rsample/tests/testthat/test_labels.R
+/usr/lib64/R/library/rsample/tests/testthat/test_loo.R
+/usr/lib64/R/library/rsample/tests/testthat/test_mc.R
+/usr/lib64/R/library/rsample/tests/testthat/test_names.R
+/usr/lib64/R/library/rsample/tests/testthat/test_nesting.R
+/usr/lib64/R/library/rsample/tests/testthat/test_rolling.R
+/usr/lib64/R/library/rsample/tests/testthat/test_rset.R
+/usr/lib64/R/library/rsample/tests/testthat/test_rsplit.R
+/usr/lib64/R/library/rsample/tests/testthat/test_strata.R
+/usr/lib64/R/library/rsample/tests/testthat/test_tidy.R
+/usr/lib64/R/library/rsample/tests/testthat/test_vfold.R
