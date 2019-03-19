@@ -1,6 +1,8 @@
 0.0.4
 R-AmesHousing
+R-Rcpp
 R-broom
+R-dplyr
 R-generics
 R-ggplot2
 R-gtable
@@ -9,6 +11,7 @@ R-lazyeval
 R-lubridate
 R-mime
 R-munsell
+R-pillar
 R-recipes
 R-rlang
 R-scales
