@@ -4,15 +4,18 @@
 #
 Name     : R-rsample
 Version  : 0.0.4
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/rsample_0.0.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsample_0.0.4.tar.gz
 Summary  : General Resampling Infrastructure
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-Rcpp
 Requires: R-dplyr
-Requires: R-pillar
+Requires: R-generics
+Requires: R-purrr
+Requires: R-rlang
+Requires: R-tibble
+Requires: R-tidyr
 BuildRequires : R-AmesHousing
 BuildRequires : R-Rcpp
 BuildRequires : R-broom
@@ -26,6 +29,7 @@ BuildRequires : R-lubridate
 BuildRequires : R-mime
 BuildRequires : R-munsell
 BuildRequires : R-pillar
+BuildRequires : R-purrr
 BuildRequires : R-recipes
 BuildRequires : R-rlang
 BuildRequires : R-scales
@@ -44,13 +48,13 @@ No detailed description available
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1552954953
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1563052352
 
 %install
-export SOURCE_DATE_EPOCH=1552954953
+export SOURCE_DATE_EPOCH=1563052352
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -79,12 +83,12 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  rsample || :
+R CMD check --no-manual --no-examples --no-codoc rsample || :
 
 
 %files
