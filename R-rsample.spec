@@ -4,42 +4,32 @@
 #
 Name     : R-rsample
 Version  : 0.0.5
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/rsample_0.0.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsample_0.0.5.tar.gz
 Summary  : General Resampling Infrastructure
 Group    : Development/Tools
 License  : GPL-2.0
+Requires: R-broom
 Requires: R-dplyr
 Requires: R-furrr
 Requires: R-generics
+Requires: R-ggplot2
 Requires: R-purrr
 Requires: R-rlang
 Requires: R-tibble
 Requires: R-tidyr
 Requires: R-tidyselect
-BuildRequires : R-AmesHousing
-BuildRequires : R-Rcpp
 BuildRequires : R-broom
 BuildRequires : R-dplyr
 BuildRequires : R-furrr
 BuildRequires : R-generics
 BuildRequires : R-ggplot2
-BuildRequires : R-gtable
-BuildRequires : R-labeling
-BuildRequires : R-lazyeval
-BuildRequires : R-lubridate
-BuildRequires : R-mime
-BuildRequires : R-munsell
-BuildRequires : R-pillar
 BuildRequires : R-purrr
-BuildRequires : R-recipes
 BuildRequires : R-rlang
-BuildRequires : R-scales
 BuildRequires : R-tibble
 BuildRequires : R-tidyr
 BuildRequires : R-tidyselect
-BuildRequires : R-utf8
 BuildRequires : buildreq-R
 
 %description
@@ -53,10 +43,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563851494
+export SOURCE_DATE_EPOCH=1563896749
 
 %install
-export SOURCE_DATE_EPOCH=1563851494
+export SOURCE_DATE_EPOCH=1563896749
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
