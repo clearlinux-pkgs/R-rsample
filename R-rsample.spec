@@ -4,13 +4,14 @@
 #
 Name     : R-rsample
 Version  : 0.0.5
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/rsample_0.0.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsample_0.0.5.tar.gz
 Summary  : General Resampling Infrastructure
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-dplyr
+Requires: R-furrr
 Requires: R-generics
 Requires: R-purrr
 Requires: R-rlang
@@ -52,10 +53,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563851222
+export SOURCE_DATE_EPOCH=1563851494
 
 %install
-export SOURCE_DATE_EPOCH=1563851222
+export SOURCE_DATE_EPOCH=1563851494
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
