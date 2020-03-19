@@ -4,7 +4,7 @@
 #
 Name     : R-rsample
 Version  : 0.0.5
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/rsample_0.0.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsample_0.0.5.tar.gz
 Summary  : General Resampling Infrastructure
